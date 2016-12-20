@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>jQuery dependency fields</title>
+</head>
+<body>
+	<!-- Simple Example -->
+	<h1>Simple Example</h1>
+	<label for="parent">Parent</label>
+	<select name="parent" id="parent" class="form-control">
+		<option value="">-- Select--</option>
+		<option value="parent_1">Parent option 1</option>
+		<option value="parent_2">Parent option 2</option>
+		<option value="parent_3">Parent option 3</option>
+		<option value="parent_4">Parent option 4</option>
+	</select>
+
+
+    <label for="child">Child</label>
+	<select name="child" id="child" class="form-control" depend-on="parent">
+		<option value="">-- Select--</option>
+		<option value="1" dependency-value="parent_1">Child option 1 (parent_1)</option>
+		<option value="2" dependency-value="parent_1">Child option 2 (parent_1)</option>
+		<option value="3" dependency-value="parent_1">Child option 3 (parent_1)</option>
+		<option value="4" dependency-value="parent_1">Child option 4 (parent_1)</option>
+
+		<option value="5" dependency-value="parent_2">Child option 1 (parent_2)</option>
+		<option value="6" dependency-value="parent_2">Child option 2 (parent_2)</option>
+		<option value="7" dependency-value="parent_2">Child option 3 (parent_2)</option>
+		<option value="8" dependency-value="parent_2">Child option 4 (parent_2)</option>
+
+		<option value="9" dependency-value="parent_3">Child option 1 (parent_3)</option>
+		<option value="10" dependency-value="parent_3">Child option 2 (parent_3)</option>
+		<option value="11" dependency-value="parent_3">Child option 3 (parent_3)</option>
+		<option value="12" dependency-value="parent_3">Child option 4 (parent_3)</option>
+
+		<option value="13" dependency-value="parent_4">Child option 1 (parent_4)</option>
+		<option value="14" dependency-value="parent_4">Child option 2 (parent_4)</option>
+		<option value="15" dependency-value="parent_4">Child option 3 (parent_4)</option>
+		<option value="16" dependency-value="parent_4">Child option 4 (parent_4)</option>
+	</select>
+
+	<hr>
+
+	<!-- Example 2-->
+	<h1>Example 2</h1>
+	<label for="parent_example_2">Parent example 2</label>
+	<select name="parent_example_2" id="parent_example_2" class="form-control">
+		<option value="">-- Select--</option>
+		<option value="parent_example_2_1">Parent example 2 option 1</option>
+		<option value="parent_example_2_2">Parent example 2 option 2</option>
+		<option value="parent_example_2_3">Parent example 2 option 3</option>
+		<option value="parent_example_2_4">Parent example 2 option 4</option>
+	</select>
+
+
+    <label for="child_example_2">Child example 2</label>
+	<select name="child_example_2" id="child_example_2" class="form-control" depend-on="parent_example_2">
+		<option value="">-- Select--</option>
+		<option value="1" dependency-value="parent_example_2_1">Child option 1 (parent_example_2_1)</option>
+		<option value="2" dependency-value="parent_example_2_1">Child option 2 (parent_example_2_1)</option>
+		<option value="3" dependency-value="parent_example_2_1">Child option 3 (parent_example_2_1)</option>
+		<option value="4" dependency-value="parent_example_2_1">Child option 4 (parent_example_2_1)</option>
+
+		<option value="5" dependency-value="parent_example_2_2">Child option 1 (parent_example_2_2)</option>
+		<option value="6" dependency-value="parent_example_2_2">Child option 2 (parent_example_2_2)</option>
+		<option value="7" dependency-value="parent_example_2_2">Child option 3 (parent_example_2_2)</option>
+		<option value="8" dependency-value="parent_example_2_2">Child option 4 (parent_example_2_2)</option>
+
+		<option value="9" dependency-value="parent_example_2_3">Child option 1 (parent_example_2_3)</option>
+		<option value="10" dependency-value="parent_example_2_3">Child option 2 (parent_example_2_3)</option>
+		<option value="11" dependency-value="parent_example_2_3">Child option 3 (parent_example_2_3)</option>
+		<option value="12" dependency-value="parent_example_2_3">Child option 4 (parent_example_2_3)</option>
+
+		<option value="13" dependency-value="parent_example_2_4">Child option 1 (parent_example_2_4)</option>
+		<option value="14" dependency-value="parent_example_2_4">Child option 2 (parent_example_2_4)</option>
+		<option value="15" dependency-value="parent_example_2_4">Child option 3 (parent_example_2_4)</option>
+		<option value="16" dependency-value="parent_example_2_4">Child option 4 (parent_example_2_4)</option>
+	</select>
+
+	<label for="child_2_example_2">Child 2 example 2</label>
+	<select name="child_2_example_2" id="child_2_example_2" class="form-control" depend-on="child_example_2">
+		<option value="">-- Select--</option>
+		<option value="1" dependency-value="1">Child 2 option 1 (parent_child_example_2)</option>
+		<option value="2" dependency-value="1">Child 2 option 2 (parent_child_example_2)</option>
+		<option value="3" dependency-value="2">Child 2 option 3 (parent_child_example_2)</option>
+		<option value="4" dependency-value="2">Child 2 option 4 (parent_child_example_2)</option>
+	</select>
+
+	<hr>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script src="../scripts.js"></script>
+</body>
+</html>
